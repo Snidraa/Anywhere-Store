@@ -24,15 +24,22 @@ dist-ssr
 *.sln
 *.sw?
 
-# Файлы окружения
+# Игнорирование зависимостей Node.js
+node_modules/
+.npm
+
+# Игнорирование файлов окружения
 .env
 
-# Папки и файлы специфичные для фронтенда (если есть)
+# Игнорирование файлов для фронтенда (если есть специфические файлы для client)
 client/node_modules/
 client/dist/
 client/dist-ssr/
+client/.npm
+client/.env
 
-# Папки и файлы специфичные для бэкенда (если есть)
+# Игнорирование файлов для бэкенда (если есть специфические файлы для server)
 server/node_modules/
 server/dist/
+server/.npm
 server/.env
