@@ -1,0 +1,37 @@
+.area {
+	width: 100%;
+	height: 4rem;
+	border-radius: 3.1rem;
+	background: #f5f7ff;
+	padding: 0 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media (max-width: 1024px) {
+		height: 4rem;
+		flex-direction: row-reverse;
+		gap: 1rem;
+	}
+
+	input {
+		width: 100%;
+		flex: 1 1 auto;
+		margin-right: 2rem;
+		background: #f5f7ff;
+		color: var(--color-5, #000);
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+
+	.icon {
+		cursor: pointer;
+		width: 2.1rem;
+		height: 2.1rem;
+		transition: scale 0.25s ease-in-out;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

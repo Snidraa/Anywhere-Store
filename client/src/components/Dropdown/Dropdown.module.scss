@@ -1,0 +1,30 @@
+.dropdown {
+	height: auto;
+	overflow: hidden;
+
+	h3 {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.6rem;
+		font-weight: 600;
+		padding-bottom: 0.5rem;
+
+		.arrow {
+			transition: rotate 0.25s ease-in-out;
+
+			&Up {
+				transition: rotate 0.25s ease-in-out;
+				rotate: -180deg;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.dropdown h3 {
+		align-items: center;
+		font-size: 1.4rem;
+	}
+}

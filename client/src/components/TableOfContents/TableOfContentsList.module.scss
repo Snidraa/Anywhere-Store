@@ -1,0 +1,42 @@
+nav {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 14rem;
+
+	min-width: 32rem;
+	overflow: auto;
+	padding: 2.5rem;
+	background: var(--Color---1, #f5f7ff);
+	border-radius: 1rem;
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	li.active > a {
+		font-weight: 600;
+	}
+
+	li > a:hover {
+		font-weight: 500;
+	}
+
+	a {
+		color: var(--Color---7, #000);
+		font-size: 1.4rem;
+		font-weight: 400;
+		line-height: 1.8rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	nav {
+		position: fixed;
+		top: 50%;
+		right: 2rem;
+		transform: translateY(-50%);
+		filter: drop-shadow(0 0 0.25rem rgba(34, 60, 80, 0.5));
+	}
+}

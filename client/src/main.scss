@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Файл обнуляющих стилей
+@import '_nullstyle.scss';
+@import '_mixins.scss';
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+#root {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10rem;
+}

@@ -1,0 +1,85 @@
+.wrapper {
+	width: 100%;
+	padding: 13.4rem 2rem 2rem;
+}
+
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	h1 {
+		font-size: 3.2rem;
+		font-weight: 600;
+	}
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	gap: 3rem;
+
+	& > article {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		width: 70%;
+
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 2.6rem;
+
+		& > h2,
+		& > h3 {
+			scroll-margin-top: 14rem;
+			font-weight: 600;
+			line-height: normal;
+		}
+
+		& > h2 {
+			font-size: 2.4rem;
+		}
+
+		& > h3 {
+			font-size: 1.6rem;
+		}
+
+		@supports (-webkit-hyphens: none) {
+			& > h2,
+			& > h3 {
+				padding-top: 14rem;
+				margin-top: -14rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.container h1 {
+		font-size: 2.5rem;
+	}
+
+	.content {
+		gap: 0;
+
+		& > article {
+			width: 100%;
+
+			& > h2 {
+				font-size: 2.3rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 520px) {
+	.container h1 {
+		font-size: 2rem;
+	}
+
+	.content > article > h2 {
+		font-size: 1.8rem;
+	}
+}

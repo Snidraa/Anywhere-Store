@@ -1,0 +1,139 @@
+.wrapper {
+	width: 100%;
+	padding: 13.4rem 2rem 2rem;
+}
+
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	h1 {
+		font-size: 3.2rem;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	& > div {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		gap: 1rem;
+	}
+}
+
+.desktopSidebar {
+	min-width: 23rem;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	background: #f5f7ff;
+	padding: 1rem;
+	border-radius: 1rem;
+	color: #000;
+
+	h2 {
+		font-size: 2rem;
+		font-weight: 600;
+		text-align: center;
+		padding-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 0.1rem 0 0 rgba(#000, 0.2);
+	}
+}
+
+.mobileSidebar {
+	position: fixed;
+	overflow-y: scroll;
+	width: 32rem;
+	height: 100vh;
+	padding: 1rem 2rem;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background: #fff;
+
+	h2 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 2rem;
+		font-weight: 600;
+		text-align: center;
+		padding: 1.5rem 0;
+		margin-bottom: 1.5rem;
+		box-shadow: 0 0.1rem 0 0 rgba(#000, 0.2);
+	}
+
+	&_close {
+		cursor: pointer;
+		width: 2rem;
+		height: 2rem;
+		color: #000;
+		transition: color 0.25s ease-in-out;
+
+		&:active {
+			color: #a2a6b0;
+		}
+	}
+
+	&Show {
+		animation: showMenu 0.25s ease-in-out forwards;
+	}
+
+	&Hide {
+		animation: showMenu 0.25s ease-in-out forwards reverse;
+	}
+
+	@keyframes showMenu {
+		from {
+			opacity: 0;
+			transform: translate(-30rem);
+		}
+		to {
+			opacity: 1;
+			transform: translate(0);
+		}
+	}
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+
+	&_header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
+		margin-bottom: 1rem;
+		color: #a2a6b0;
+		font-size: 1.3rem;
+		font-weight: 400;
+		line-height: 210%;
+
+		& > button {
+			min-width: fit-content;
+			padding: 0 1rem;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.container h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 520px) {
+	.container h1 {
+		font-size: 2rem;
+	}
+
+	.desktopSidebar h2,
+	.mobileSidebar h2 {
+		font-size: 1.6rem;
+	}
+}

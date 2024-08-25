@@ -1,0 +1,147 @@
+.navbarHeaderWrapper {
+	padding: 0 2rem;
+	background: #000;
+}
+
+.navbarHeader {
+	max-width: 140rem;
+	height: 4.4rem;
+	margin: 0 auto;
+	color: #a2a6b0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.shopInfo {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+
+	&Popup {
+		height: 1.2rem;
+		position: relative;
+		color: #fff;
+
+		.arrow {
+			cursor: pointer;
+			transition: rotate 0.25s ease-in-out;
+
+			&Up {
+				cursor: pointer;
+				transition: rotate 0.25s ease-in-out;
+				rotate: -180deg;
+			}
+		}
+
+		&Show {
+			animation: showInfo 0.25s ease-in-out forwards;
+		}
+
+		&Hide {
+			animation: showInfo 0.25s ease-in-out forwards reverse;
+		}
+
+		@keyframes showInfo {
+			from {
+				opacity: 0;
+				transform: scale(0.9);
+			}
+			to {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.adress {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+
+	a {
+		cursor: pointer;
+		color: #fff;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 2px;
+			right: 50%;
+			bottom: -5px;
+			background: #fff;
+			transition: width 0.3s ease-out;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 2px;
+			left: 50%;
+			bottom: -5px;
+			background: #fff;
+			transition: width 0.3s ease-out;
+		}
+
+		&:hover {
+			&::before {
+				width: 50%;
+			}
+
+			&::after {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.contacts {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+
+	span {
+		margin-right: 0.6rem;
+	}
+
+	& > a {
+		color: #fff;
+		line-height: 0;
+	}
+
+	&_facebook {
+		font-size: 2.1rem;
+	}
+
+	&_instagram {
+		font-size: 2.2rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.navbarHeaderWrapper {
+		display: flex;
+	}
+
+	.navbarHeader {
+		width: 100%;
+	}
+
+	.logo {
+		width: 6rem;
+		height: 4rem;
+		background: #0156ff;
+		border-radius: 6rem 6rem 0 0;
+		display: flex;
+		margin-right: 2rem;
+		justify-content: center;
+		transform: translateY(1rem);
+	}
+}

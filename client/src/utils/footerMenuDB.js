@@ -1,0 +1,25 @@
+export const menu = {
+	title: 'Information',
+	list: {
+		'About Us': '',
+		'About Zip': '',
+		'Privacy Policy': '',
+		Search: '',
+		Terms: '',
+		'Orders and Returns': '',
+		'Contact Us': '',
+		'Advanced Search': '',
+		'Newsletter Subscription': '',
+	},
+	links: [
+		['About Us', ''],
+		['About Zip', ''],
+		['Privacy Policy', ''],
+		['Search', ''],
+		['Terms', ''],
+		['Orders and Returns', ''],
+		['Contact Us', ''],
+		['Advanced Search', ''],
+		['Newsletter Subscription', ''],
+	],
+};

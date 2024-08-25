@@ -1,0 +1,52 @@
+@mixin button-styles($mainBackground, $mainColor, $hoverBackground, $hoverColor) {
+	cursor: pointer;
+	min-width: fit-content;
+	// width: fit-content;
+	background: $mainBackground;
+	padding: 0.5rem 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border-radius: 3rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	border: $mainColor solid 0.2rem;
+	color: $mainColor;
+
+	&:hover {
+		transition: all 0.25s ease-in-out;
+		background: $hoverBackground;
+		color: $hoverColor;
+	}
+
+	&:active {
+		background: $mainBackground;
+		color: $mainColor;
+	}
+
+	& > svg {
+		width: 1.8rem;
+		height: 1.8rem;
+	}
+}
+
+.blueButton {
+	@include button-styles(transparent, #0156ff, #0156ff, #fff);
+}
+
+.greenButton {
+	@include button-styles(transparent, #167916, #167916, #fff);
+}
+
+.redButton {
+	@include button-styles(transparent, #e21313, #e21313, #fff);
+}
+
+.blackButton {
+	@include button-styles(transparent, #000, #000, #fff);
+}
+
+.grayButton {
+	@include button-styles(transparent, #a2a6b0, #a2a6b0, #fff);
+}

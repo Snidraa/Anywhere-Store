@@ -1,0 +1,40 @@
+@media (max-width: 1024px) {
+	.tableOfContents {
+		position: relative;
+
+		&List {
+			&Show {
+				animation: showMenu 0.25s ease-in-out forwards;
+			}
+
+			&Hide {
+				animation: showMenu 0.25s ease-in-out forwards reverse;
+			}
+
+			@keyframes showMenu {
+				from {
+					transform: translate(200%, -50%);
+				}
+				to {
+					transform: translate(0, -50%);
+				}
+			}
+		}
+
+		&Button {
+			position: fixed;
+			right: 2rem;
+			top: 50%;
+			transform: translate(1.5rem, -50%);
+			z-index: 3;
+			cursor: pointer;
+			width: 3rem;
+			height: 3rem;
+			padding: 0.25rem;
+			background: #fff;
+			border: 0.2rem solid #0156ff;
+			border-radius: 2rem;
+			color: #0156ff;
+		}
+	}
+}

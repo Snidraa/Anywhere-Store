@@ -1,0 +1,174 @@
+.wrapper {
+	width: 100%;
+	padding: 13.4rem 2rem 2rem;
+}
+
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.content {
+	display: flex;
+	gap: 2rem;
+	// display: grid;
+	// gap: 2rem;
+	// grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+	// grid-template-areas:
+	// 	'A B B'
+	// 	'A B B';
+
+	font-size: 1.6rem;
+	color: #000;
+	padding-bottom: 2rem;
+
+	box-shadow: 0 0.1rem 0 0 rgba(#000, 0.2);
+
+	&_header,
+	&_footer,
+	&_footerInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	&_header {
+		// grid-area: A;
+		align-items: center;
+
+		img {
+			max-width: 40rem;
+			width: 100%;
+			aspect-ratio: 1/1;
+		}
+
+		.ratingRow {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+
+	&_footer {
+		width: 100%;
+		// grid-area: B;
+
+		&Actions {
+			display: flex;
+			flex-direction: row;
+			gap: 2rem;
+			// justify-content: center;
+			align-items: center;
+
+			.addToWishlist {
+				cursor: pointer;
+				width: 3rem;
+				height: 3rem;
+				background: transparent;
+
+				img {
+					width: 100%;
+					aspect-ratio: 1/1;
+				}
+
+				&:hover {
+					transition: all 0.25s ease-in-out;
+					transform: scale(1.1);
+				}
+			}
+
+			.devicePrice {
+				font-size: 1.4rem;
+				font-weight: 400;
+
+				&Value {
+					font-size: 1.6rem;
+					font-weight: 600;
+					line-height: 140%;
+				}
+			}
+
+			.DevicePageCounter {
+				width: fit-content;
+				padding: 0.5rem 1rem;
+				border-radius: 6px;
+				background: #f5f7ff;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				&_textField {
+					max-width: 3rem;
+					background: transparent;
+					text-align: center;
+
+					&::-webkit-inner-spin-button,
+					&::-webkit-outer-spin-button {
+						-webkit-appearance: none;
+						margin: 0;
+					}
+
+					&[type='number'] {
+						appearance: textfield;
+						-moz-appearance: textfield;
+					}
+				}
+
+				&_button {
+					cursor: pointer;
+					color: gray;
+					transition: transform 0.25s ease-in-out;
+
+					&:hover {
+						color: black;
+						transform: scale(1.2);
+					}
+					&:active {
+						color: gray;
+						transform: none;
+					}
+				}
+			}
+		}
+
+		&Info {
+			.deviceName {
+				font-size: 3.2rem;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+
+			.deviceInfo {
+				// max-width: 70rem;
+				font-size: 1.6rem;
+				font-weight: 300;
+				line-height: 3rem;
+				background: #f5f7ff;
+				border-radius: 2rem;
+				padding: 1rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+
+		font-size: 1.4rem;
+		color: #000;
+
+		&_footerActions {
+			gap: 1rem;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+}

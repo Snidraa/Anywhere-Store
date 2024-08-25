@@ -1,0 +1,36 @@
+input[type='radio'] {
+	display: none;
+}
+
+.container {
+	position: relative;
+	height: 2rem;
+	width: 10rem;
+	display: flex;
+	align-items: center;
+
+	& > div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		// gap: 0.45rem;
+	}
+
+	.rating_active {
+		// width: 70%;
+		overflow: hidden;
+		&:hover {
+			width: 100%;
+		}
+		// color: yellow;
+	}
+}
+
+.star {
+	cursor: pointer;
+	font-size: 2rem;
+	transition: color 0.25s ease-in-out;
+}

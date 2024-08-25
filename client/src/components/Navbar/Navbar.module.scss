@@ -1,0 +1,12 @@
+.navbar {
+	width: 100%;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	font-size: 1.2rem;
+
+	span {
+		color: #fff;
+	}
+}

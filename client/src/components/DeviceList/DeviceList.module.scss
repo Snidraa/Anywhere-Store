@@ -1,0 +1,20 @@
+.deviceList {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.deviceList {
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.deviceList {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		gap: 0;
+	}
+}

@@ -1,0 +1,51 @@
+.breadcrumbs {
+	display: flex;
+	gap: 1rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: #000;
+
+	.homeLink {
+		position: relative;
+		cursor: pointer;
+		color: #000;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 1px;
+			right: 50%;
+			bottom: -3px;
+			background: #000;
+			transition: width 0.3s ease-out;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 1px;
+			left: 50%;
+			bottom: -3px;
+			background: #000;
+			transition: width 0.3s ease-out;
+		}
+
+		&:hover {
+			&::before {
+				width: 50%;
+			}
+
+			&::after {
+				width: 50%;
+			}
+		}
+	}
+
+	span {
+		color: #0156ff;
+	}
+}
